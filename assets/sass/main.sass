@@ -1,0 +1,370 @@
+@import 'colors.sass'
+@font-face 
+	font-family: 'Helios'
+	src: local('Helios Light'), local('Helios-Light'), url('../fonts/HeliosLightC.woff2') format('woff2'), url('../fonts/HeliosLightC.woff') format('woff'), url('../fonts/HeliosLightC.ttf') format('truetype')
+	font-weight: 300
+	font-style: normal
+@font-face 
+	font-family: 'Helios'
+	src: local('Helios Regular'), local('Helios-Regular'), url('../fonts/HeliosC.woff2') format('woff2'), url('../fonts/HeliosC.woff') format('woff'), url('../fonts/HeliosC.ttf') format('truetype')
+	font-weight: 400
+	font-style: normal
+@font-face 
+	font-family: 'Helios'
+	src: local('Helios Bold'), local('Helios-Bold'), url('../fonts/HeliosC-Bold.woff2') format('woff2'), url('../fonts/HeliosC-Bold.woff') format('woff'), url('../fonts/HeliosC-Bold.ttf') format('truetype')
+	font-weight: 700
+	font-style: normal
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+a[class]
+	text-decoration: none
+ul[class]
+	list-style: none
+body
+	font-family: 'Helios'
+.container
+	width: 1194px
+	margin: 0 auto
+.title
+	color: #fff
+	font-size: 36px
+	font-weight: 700
+.button
+	color: #fff
+	font-size: 16px
+	font-weight: 700
+	padding: 20px 35px
+	outline: none
+	border: none
+	background: $second
+	transition: 0.3s
+	&__arrow
+		margin-left: 35px
+	&:hover
+		color: $second
+		background: #fff
+	&__second
+		background: none
+		color: $link
+		font-weight: 400
+		border: 1px solid #EBEBEB
+		&:hover
+			background: $link
+			color: #fff
+			border-color: $link
+.slider
+	&-control
+		position: absolute
+		top: 50%
+		left: -102px
+		width: calc(100% + 204px)
+		transform: translateY(-50%)
+		height: 0
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&-button
+		width: 52px
+		height: 94px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: none
+		border: 1px solid #E0E0E0
+		cursor: pointer
+		transition: 0.3s
+		&-icon
+			width: 6px
+			height: 10px
+		&:hover
+			background: #fff
+			border-color: #fff
+.header
+	$paddingBottom: 25px
+	padding: 45px 0 $paddingBottom
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background: #F2F2F2
+	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__menu
+		display: flex
+		align-items: center
+		&-item
+			margin-right: 65px
+			&:last-child
+				margin-right: 0
+		&-drop
+			.header__menu-link
+				color: $link
+		&-link
+			color: $main
+			font-size: 16px
+			font-weight: 400
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				bottom: -30px
+				left: 0
+				width: 0
+				height: 2px
+				background: $second
+				z-index: 1
+				transition: 0.3s
+			&:hover:after,
+			&.active:after
+				width: 100%
+.banner
+	margin-top: 35px
+	background-color: $third
+	background-image: url('../img/banner-bg.jpg')
+	background-position: right center
+	background-repeat: no-repeat
+	overflow: hidden
+	.container
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+	&__info
+		padding: 120px 0
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		position: relative
+		background: $third
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			background: $third
+			right: -100%
+			top: 40%
+			width: 500px
+			height: 100%
+			z-index: -1
+			transform: rotate(45deg) translateX(-50%)
+		&:before
+			z-index: 1
+			box-shadow: none
+	&__title
+		margin-bottom: 60px
+		position: relative
+		z-index: 2
+	&__button
+		position: relative
+		z-index: 2
+	&__photo
+		margin-left: 70px
+		height: calc(100% - 20px)
+		width: 60%
+		position: relative
+		z-index: 2
+.advantages
+	padding: 70px 0
+	.container
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 50px
+		border: 1px solid #EDEDED
+		width: 100%
+		height: 100%
+		background: #fff
+		transition: 0.3s
+		&-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			fill: $icon
+			transition: 0.3s
+			width: 25%
+			height: auto
+		&:nth-child(4)
+			svg
+				stroke: $icon
+		&-title
+			color: $main
+			font-size: 20px
+			font-weight: 400
+		&-description
+			margin-top: 20px
+			color: $description
+			font-size: 16px
+			font-weight: 400
+			text-align: center
+			opacity: 0
+			user-select: none
+			transition: 0.3s
+		&:hover
+			filter: drop-shadow(0px 4px 52px rgba(0, 0, 0, 0.13))
+			.advantages__item
+				&-icon
+					fill: $second
+			&:nth-child(4)
+				svg
+					stroke: $second
+			.advantages__item-description
+				opacity: 1
+				user-select: initial
+.workers
+	padding-bottom: 60px
+	.container
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 1480px
+			height: 100%
+			background: #F7F7F7
+			z-index: -1
+	&__item
+		display: flex
+		align-items: center
+		padding-top: 20px
+		&-info
+			padding-right: 160px
+		&-name
+			color: $main
+			font-size: 36px
+			font-weight: 400
+			margin-bottom: 20px
+		&-position
+			color: $support
+			font-size: 16px
+			font-weight: 400
+		&-description
+			color: $main
+			font-size: 18px
+			font-weight: 400
+			margin-top: 40px
+		&-photo
+			width: 100%
+.areas
+	padding-bottom: 40px
+	&__title
+		text-align: center
+		font-size: 24px
+		font-weight: 400
+	&__block
+		margin-top: 70px
+		display: flex
+		align-items: center
+		justify-content: center
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		background: #fff
+		transition: 0.3s
+		padding: 45px 60px
+		margin: 0 20px
+		&-icon
+			fill: $icon
+			transition: 0.3s
+			width: 30px
+			height: 30px
+			transition: 0.3s
+			&-wrapper
+				width: 100px
+				height: 100px
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 50%
+				background: #F2F2F2
+				margin-bottom: 40px
+				transition: 0.3s
+		&-title
+			font-size: 20px
+			font-weight: 400
+			text-align: center
+		&-link
+			margin-top: -30%
+			opacity: 0
+			transition: 0.3s
+		&:hover
+			box-shadow: 0px 14px 24px rgba(15, 18, 20, 0.1)
+			.areas__item
+				&-icon
+					fill: #fff
+					width: 38px
+					height: 38px
+					&-wrapper
+						background: $second
+				&-link
+					margin-top: 50px
+					opacity: 1
+.video
+	width: 100%
+	height: 556px
+	background-image: url('../img/video-poster.png')
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	position: relative
+	transition: 0.3s
+	&-section
+		position: relative
+		line-height: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(22, 22, 22, 0.31)
+			z-index: 3
+		&.active
+			.video
+				background: #000
+				&__play
+					display: none
+			&:before
+				display: none
+	&__play
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 9
+		width: 104px
+		height: 104px
+		border: 1px solid rgba(195, 200, 200, 0.36)
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		background: none
+		outline: none
+		cursor: pointer
+		transition: 0.3s
+		&-icon
+			width: 22px
+			fill: #fff
+			transition: 0.3s
+		&:hover
+			background: #fff
+			border-color: #fff
+			.video__play-icon
+				fill: $main

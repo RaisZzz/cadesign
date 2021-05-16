@@ -1,0 +1,8 @@
+<svg>
+	<symbol id="prev" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M6 8.57143L2.35417 5L6 1.42857L5.27083 -3.18729e-08L0.166667 5L5.27083 10L6 8.57143Z" fill="#242627"/>
+	</symbol>
+	<symbol id="next" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M-6.24448e-08 8.57143L3.64583 5L-3.74669e-07 1.42857L0.729166 -3.18729e-08L5.83333 5L0.729167 10L-6.24448e-08 8.57143Z" fill="#242627"/>
+	</symbol>
+</svg>
