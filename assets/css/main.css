@@ -11,7 +11,7 @@ body { font-family: "Helios"; }
 
 .container { width: 1194px; margin: 0 auto; }
 
-.title { color: #fff; font-size: 36px; font-weight: 700; }
+.title { color: #242627; font-size: 36px; font-weight: 400; text-align: center; }
 
 .button { color: #fff; font-size: 16px; font-weight: 700; padding: 20px 35px; outline: none; border: none; background: #E9862A; -webkit-transition: 0.3s; transition: 0.3s; }
 .button__arrow { margin-left: 35px; }
@@ -40,7 +40,7 @@ body { font-family: "Helios"; }
 .banner__info { padding: 120px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; background: #003264; }
 .banner__info:after, .banner__info:before { content: ""; position: absolute; background: #003264; right: -100%; top: 40%; width: 500px; height: 100%; z-index: -1; -webkit-transform: rotate(45deg) translateX(-50%); transform: rotate(45deg) translateX(-50%); }
 .banner__info:before { z-index: 1; -webkit-box-shadow: none; box-shadow: none; }
-.banner__title { margin-bottom: 60px; position: relative; z-index: 2; }
+.banner__title { color: #fff; font-size: 36px; font-weight: 700; margin-bottom: 60px; position: relative; z-index: 2; }
 .banner__button { position: relative; z-index: 2; }
 .banner__photo { margin-left: 70px; height: calc(100% - 20px); width: 60%; position: relative; z-index: 2; }
 
@@ -89,3 +89,9 @@ body { font-family: "Helios"; }
 .video__play-icon { width: 22px; fill: #fff; -webkit-transition: 0.3s; transition: 0.3s; }
 .video__play:hover { background: #fff; border-color: #fff; }
 .video__play:hover .video__play-icon { fill: #242627; }
+
+.valuables { padding: 90px 0; background: #F2F2F2; }
+.valuables__grid { margin-top: 60px; display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 30px; }
+.valuables__item { padding: 50px; background: #fff; }
+.valuables__item-title { color: #242627; font-size: 20px; font-weight: 400; margin-bottom: 30px; line-height: 28px; }
+.valuables__item-description { color: #4F4F4F; font-size: 16px; font-weight: 400; line-height: 30px; }
